@@ -10,7 +10,6 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     m_ui(new Ui::MainWindow),
-    m_status(new QLabel),
     m_console(new Console),
     m_settings(new SettingsDialog),
 //! [1]
@@ -26,8 +25,6 @@ MainWindow::MainWindow(QWidget *parent) :
     m_ui->actionDisconnect->setEnabled(false);
     m_ui->actionQuit->setEnabled(true);
     m_ui->actionConfigure->setEnabled(true);
-
-    m_ui->statusBar->addWidget(m_status);
 
     initActionsConnections();
 
